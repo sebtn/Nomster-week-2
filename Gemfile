@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 # Add bootstraps
 gem 'bootstrap-sass', '~> 3.3.4'
 
+# Add pagination
+gem 'kaminari'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
