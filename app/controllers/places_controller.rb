@@ -22,14 +22,14 @@ class PlacesController < ApplicationController
 		@place = Place.find(params[:id])
 
 		if @place.user != current_user
-			retunr render :text => 'Not Allowed', :status => :forbidden
+			return render :text => 'Not Allowed', :status => :forbidden
 		end	
 	end	
 
 	def update
 		@place = Place.find(params[:id])
 		if @place.user != current_user
-			retunr render :text => 'Not Allowed', :status => :forbidden
+			return render :text => 'Not Allowed', :status => :forbidden
 		end	
 
 		@place.update_attributes(place_params)
