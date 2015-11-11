@@ -1,8 +1,10 @@
 class Place < ActiveRecord::Base
 	belongs_to :user
+	has_many :comments
+
 	geocoded_by :address
 	after_validation :geocode
-	validate :name,  presence: true
+	validate :name,  presence => true
 
 
 	belongs_to :places
