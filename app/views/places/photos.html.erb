@@ -3,8 +3,9 @@
 	<h1>Upload Your Photos</h1>
 	<%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
 		<%= f.input :caption %>
+		<%= f.input :picture %>
 		<br />
-		 <%= f.submit 'Upload Image', :class => 'btn btn-primary' %>
+		 <%= f.submit 'Post Image', :class => 'btn btn-primary' %>
 	<% end %>
 </div>	
 

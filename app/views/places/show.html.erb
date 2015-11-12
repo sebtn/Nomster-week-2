@@ -50,7 +50,8 @@
 	<div class="booyah-box col-xs-10 col-xs-offset-1">		
 		<%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
 			<%= f.input :caption %>
-			<%= f.submit :"Upload Image", :class => 'btn btn-primary' %>
+			<%= f.input :picture %>
+			<%= f.submit :"Post it!", :class => 'btn btn-primary' %>
 		<% end %>	
 	</div>
 		
