@@ -1,15 +1,15 @@
 class PhotosController < ApplicationController
 	before_action :authenticate_user!
 	def create
-		@place = Photo.find(params[:place_id])
+		@photo = Place.find(params[:place_id])
 		uploader = PictureUploader
-		redirect_to place_path(@place)
+		redirect_to place_path(@photo)
 	end	
 
 	private
 
 	def photo_params
-		params.require(:photo).permit(:caption)
+		params.require(:photo).permit(:caption, :picture, :place_id)
 	end	
 end
 
