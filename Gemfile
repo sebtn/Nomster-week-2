@@ -47,6 +47,9 @@ gem "geocoder"
 # Add values to enviroment varialble ENV
 gem "figaro", ">= 1.0.0"
 
+# Add file uploader
+gem 'carrierwave'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
