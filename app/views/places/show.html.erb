@@ -140,12 +140,11 @@
 </div>	
 
 
-<div class="booyah-box col-xs-10 col-xs-offset-1">	
-		<% @place.photos.each do |photo| %>
-			<div class="col-xs-12 col-sm-6">
-			  	<%= image_tag photo.picture, :class => 'img-responsive' %>
-			</div>	
-			  	<% photo.caption %>
-		<% end %>
-</div>
+	<div class="booyah-box col-xs-6 col-xs-offset-1" id="image-container">			
+			<% @place.photos.each do |photo| %>				
+				  <%= image_tag photo.picture, :class => 'img-responsive' %>					
+				  <%= photo.caption %>
+			<% end %>
+			
+	</div>
 		

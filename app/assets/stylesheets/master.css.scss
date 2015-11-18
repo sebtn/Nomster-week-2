@@ -68,7 +68,11 @@ blockquote p {
 }
 
 img {
-  	width: 100% !important;
-  	height: auto !important;
+	border: 2px solid #FFFFFF;
+  	width: 50% !important;
+  	height:  auto !important;	
 }
 
+#image-container {
+	float:left;
+}
