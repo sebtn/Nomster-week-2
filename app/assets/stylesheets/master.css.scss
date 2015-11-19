@@ -25,6 +25,7 @@ body {
 	background: url('/assets/dark_embroidery.png');
 	border-radius: 0;
 	box-shadow: 0px 1px 1px 3px #2a2a2a;
+	margin-bottom:3px;
 }
 
 .navbar-inverse .navbar-brand {
@@ -63,16 +64,26 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote p {
   display: inline;
 }
 
-img {
-	border: 2px solid #FFFFFF;
-  	width: 50% !important;
-  	height:  auto !important;	
-}
 
-#image-container {
-	float:left;
+.carousel-inner > .item >img, .carousel-inner > .item > a > img {
+	height: 550px;
+	width: 100%;
+	
+}
+.carousel {
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+.carousel-caption {
+    font-size: 60px;
+    font-weight:100;
+    text-shadow: rgba(0,0,0,0.95) 2px 2px;
+    background-color: rgba(0,0,0,0.5);
+    width:100%;
+    position:absolute;
+    left:0;
 }
