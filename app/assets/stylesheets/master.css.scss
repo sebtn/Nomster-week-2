@@ -56,6 +56,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
   color: #ccc;
   content: open-quote;
@@ -71,7 +72,7 @@ blockquote p {
 
 
 .carousel-inner > .item >img, .carousel-inner > .item > a > img {
-	max-height: 550px;
+	height: 550px;
 	width: 100%;
 	
 }
@@ -79,7 +80,7 @@ blockquote p {
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 .carousel-caption {
-    font-size: 60px;
+    font-size: 40px;
     font-weight:100;
     text-shadow: rgba(0,0,0,0.95) 2px 2px;
     background-color: rgba(0,0,0,0.5);
@@ -87,3 +88,11 @@ blockquote p {
     position:absolute;
     left:0;
 }
+.photo-container {
+	border-top: 2px solid #ffffff;
+    box-shadow: rgba(0,0,0,0.95) 2px 2px;
+    background-color: rgba(0,0,0,0.5);
+    margin-top: 4px;
+    
+}
+
