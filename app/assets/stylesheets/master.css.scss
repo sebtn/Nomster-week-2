@@ -44,8 +44,8 @@ body {
 }
 
 #map {
-height: 300px;
-}
+	height: 300px;
+}	
 
 .clear {
 	clear: both;
@@ -114,4 +114,28 @@ a {
 
 .page-numerator {
 	background-color: rgba(0,0,0,0.15);
+}
+
+.map-box {
+	background-color: rgba(0,0,0,0.15);
+}
+
+
+#googlemaps {
+	height: 100%; 
+  	width: 100%; 
+  	position:absolute; 
+  	top: 0; 
+  	left: 0; 
+  	z-index: 0;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: lime; /* Just to visualize the extent */
 }

@@ -1,5 +1,4 @@
-<div class="booyah-box col-xs-10 col-xs-offset-1">	
-	
+<div class="booyah-box col-xs-10 col-xs-offset-1 map-box">
 	<h2><%= @place.name %></h2>
 	<i><%= @place.address %></i>
 	<br/><br/>
@@ -14,7 +13,8 @@
 
 		var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 12,
-			center: myLatLng
+			center: myLatLng,
+			streetViewControl: false
 		});
 
 		var marker = new google.maps.Marker({
@@ -31,12 +31,19 @@
 <br />
 
 	<div class="pull-right"></p>
-		<% if current_user && current_user == @place.user %>			
-				<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
-			<%= link_to 'Destroy', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-danger' %>	
-	  <% end %>	
-	</div>	
-</div>	
+			
+			<% if current_user && current_user == @place.user %>	
+						<%= link_to 'Destroy', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'}, :class => 'btn btn-danger' %>	
+					<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
+				
+			<button class="btn btn-primary btn-md pull-center" data-toggle="modal" data-target="#Photo">
+					Add a photo
+				</button>	
+		  	<% end %>	
+	</div>
+
+	
+</div>
 
 <div class="clear"></div>
 
@@ -64,17 +71,7 @@
 	  </div>
 	</div>
 
-	<% if current_user && current_user == @place.user %>
-		<div class="col-xs-10 col-xs-offset-1">
-			<!--Buttons triggers modals -->
-			<button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#Photo">
-					Add a photo
-				</button>		
-			<div>
-				<div class="clear"></div>
-			</div>	
-		</div>	
-	<% end %>	
+		
 	<br />
 	<br />	
 
